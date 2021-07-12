@@ -1,21 +1,19 @@
 import React from 'react';
-
-
-
+import "../body.css"
 
 function GlobalFilter({filter, setFilter}){
-
-
     return(
         <>
             <span>
-                search : { " "},
-                <input value = {filter || ""} onChange = {(e)=> setFilter(e.target.value)} />
+                <input 
+                    className = "form-control m-2 search-box" 
+                    placeholder = "Search ..."
+                    value = {filter || ""} 
+                    onChange = {(e)=> 
+                    setFilter(e.target.value)} 
+                />
             </span>
-
-
         </>
-
     )
 }
 

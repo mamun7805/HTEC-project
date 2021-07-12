@@ -1,0 +1,15 @@
+
+.footer-list{
+    list-style-type: none;
+    position: relative;
+    padding: 10px;
+
+}
+
+.footer-list li{
+  display: inline;
+  padding: 10px 5px;
+}
+.footer-list li a {
+    color: white;
+}

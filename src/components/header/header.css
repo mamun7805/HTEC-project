@@ -1,0 +1,15 @@
+.header{
+    background-color: #2980b9;
+    padding-right: 20px;
+}
+
+.top-bar li{
+    position: relative;
+    float: right;
+    display: inline;
+    padding: 10px 5px;
+}
+
+.top-bar li a {
+    color: white;
+}

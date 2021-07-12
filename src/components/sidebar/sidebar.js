@@ -1,5 +1,4 @@
 import React from 'react';
-import {Jumbotron, ListGroup} from 'react-bootstrap'
 import "./sidebar.css";
 
 function Sidebar(){
@@ -7,15 +6,17 @@ function Sidebar(){
 
     return(
         <>  
-           <Jumbotron>
+           <div className =  "sidebar" >
+               <h3 className = "text-center text-white"> HTEC </h3>
+                <hr className = "bg-white"/>
             <ul className = "sidebar-list">
-
                 <li>  <a href = "#"> Dashboard </a> </li>
-                <li>  <a href = "#" > Dashboard </a> </li>
+                <li>  <a href = "#" > User Management </a> </li>
+                <li>  <a href = "#" > Data </a> </li>
 
             </ul>
 
-            </Jumbotron>
+            </div>
 
 
         </>

@@ -51,7 +51,7 @@ function Table(){
 		getTableBodyProps,
 		headerGroups,
 		page,
-		rows,
+		// rows,
 		prepareRow,
 		state,
 		setGlobalFilter,

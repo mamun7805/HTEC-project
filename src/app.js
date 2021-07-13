@@ -1,10 +1,12 @@
 import React from 'react';
+import { BrowserRouter, Route } from 'react-router-dom';
 
-// load components
-import Sidebar from './components/sidebar/sidebar';
-import Header from './components/header/header';
-import Body from './components/body/body';
-import Footer from './components/footer/footer';
+
+import Login from  "./components/auth/login";
+import Signup from  "./components/auth/signup";
+import Dashboard from './components/auth/admin';
+
+
 // load css
 import './app.css';
 
@@ -12,33 +14,19 @@ import './app.css';
 
 const App =()=> {
 
+    
+
     return(
 
         <>
-           
-            <div className = "row">
-                <div className = "col-md-2">
-                    <Sidebar />
-                </div>
-                <div className = "col-md-10">
-                    <div className = "header">
-                        <Header />
-                    </div>   
-                    <div className = "body-content">
-                        <Body />
-                    </div>
-                    <div className = "footer">    
-                        <Footer/>
-                    </div> 
-                       
+            <BrowserRouter>
+                <Route exact path= "/" component = {Login} />
+                <Route  path = "/register" component = {Signup} />
+                <Route path = "/dashboard" component = {Dashboard} />
+            </BrowserRouter>
 
-                </div>
-
-            </div>            
-          
             
         </>
-
     )
 }
 

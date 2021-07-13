@@ -54,7 +54,7 @@ function Login(){
                                 <hr/>
                                 <button className = "btn text-white" style = {{background : "#2980b9"}} > Login </button>
                                 <br/>
-                                <Link to = "/register " > Sign Up </Link>
+                                <Link to = "/signup " > Sign Up </Link>
                                 <br/>
                                 <a href = "/#"> Forget Password ?</a>
                             </form>

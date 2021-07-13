@@ -5,7 +5,8 @@
 
 /* table styling */
 .table-header{
-    background-color: #2980b9;
+    background-color: #34445e;
+    color: white;
 }
 
 
@@ -17,13 +18,19 @@
 
 /* pagination styling */
 .pagination-bar{
-    background-color: #2980b9;
+    background-color: #34445e;
     padding: 10px;
     color: white;
+    width: 380px;
+    text-align: right;
+    border-radius: 30px;
+    position: relative;
+    float: right;
 }
 
 .pagination-box {
     padding: 5px;
     border-radius: 10px;
-    width: 40px;
+    height: 38px;
+    width: 95px;
 }

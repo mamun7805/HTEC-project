@@ -7,12 +7,11 @@ function Header(){
     return(
         <>
 
-            <div className = "header">
-                <ul className = "top-bar">
-                    <li> <Link to ="/logout"> Logout  </Link>  </li>
-                    <li> Username  </li>
-                </ul>
+            <div className = "header-bar">
+                     <h5 className = "text-left" > <span style = {{fontSize : "30px"}} ><i class="fas fa-user"></i></span>  Mr. Ahad Hassan</h5>
+                     <Link className = "text-white btn logout-btn " to ="/logout"> Logout  </Link>
             </div>
+            
         </>
 
     )

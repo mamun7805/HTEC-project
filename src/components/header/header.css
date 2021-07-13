@@ -1,15 +1,21 @@
-.header{
+.header-bar{
     background-color: #2980b9;
-    padding-right: 20px;
-}
-
-.top-bar li{
-    position: relative;
-    float: right;
-    display: inline;
-    padding: 10px 5px;
-}
-
-.top-bar li a {
     color: white;
+    padding: 20px;
+    padding-right: 50px;
+    position: relative;
+    text-align: right;
 }
+
+.logout-btn {
+    background-color: #34445e;
+    border-radius: 30px;
+}
+
+.logout-btn:hover{
+    background-color: #2980b9;
+    border: 1px solid #34445e;
+    transition: 0.4s;
+}
+
+

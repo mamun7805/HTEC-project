@@ -10,7 +10,7 @@ function Signup(){
                 <div className = "row">
                     <div className = "col-md-4"></div>
                     <div className = "col-md-4">
-                    <div className = "bg-info p-5" >
+                    <div className = " p-5" style = {{background : "#2980b9"}} >
                        <h4 className = "text-center text-white"> Create An Account </h4> 
                     </div>
                         <div className = "container bg-white p-5 shadow-sm">
@@ -42,7 +42,7 @@ function Signup(){
 
 
                                 <hr/>
-                                <button className = "btn btn-info"> Register </button>
+                                <button className = "btn text-white " style = {{background : "#2980b9"}}> Register </button>
                             </form>
                         </div>
                     </div>
@@ -50,7 +50,7 @@ function Signup(){
                 </div>
         </div>
 
-        <div className = "bg-info p-5" >
+        <div className = " p-5" style = {{background : "#2980b9"}} >
         </div>
         
 

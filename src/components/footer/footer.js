@@ -6,7 +6,7 @@ function Footer(){
 
     return(
         <>
-            <div>
+            <div className = "footer" >
                 <ul className = "footer-list">
                     <li> <a href= "#" > Home </a> </li>
                     <li> <a href= "#" > Department </a> </li>

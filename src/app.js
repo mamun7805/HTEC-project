@@ -7,10 +7,6 @@ import Logout from './components/auth/logout';
 import Dashboard from './components/auth/dashboard';
 
 
-// load css
-import './app.css';
-
-
 
 const App =()=> {
 
@@ -19,14 +15,14 @@ const App =()=> {
     return(
 
         <>
+           <div  style = {{background : "#2980b9"}}>
             <BrowserRouter>
                 <Route exact path= "/" component = {Login} />
-                <Route  path = "/register" component = {Signup} />
+                <Route  path = "/signup" component = {Signup} />
                 <Route path = "/dashboard" component = {Dashboard} />
                 <Route path = "/logout" component = {Logout} />
-                
             </BrowserRouter>
-
+          </div>
             
         </>
     )

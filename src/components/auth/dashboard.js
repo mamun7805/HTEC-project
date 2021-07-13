@@ -1,14 +1,12 @@
 import React, {useEffect, useState} from 'react';
 import { Redirect } from 'react-router-dom';
-
-
-// load components
 // load components
 import Sidebar from '../sidebar/sidebar';
 import Header from '../header/header';
 import Body from '../body/body';
 import Footer from '../footer/footer';
 
+import "./dashboard.css";
 
 
 function Dashboard(){
@@ -16,28 +14,32 @@ function Dashboard(){
 
     return(
         <>
-            <div className = "jumbotron-fluid">
+           <div >
                <div className = "row">
                 <div className = "col-md-2">
-                    <div className = "jumbotron-fluid">
+                    <div>
                     <Sidebar />
                     </div>
                 </div>
-                <div className = "col-md-10 m-0">
-                    <div className = "header">
+                <div className = "col-md-10 right-side">
+                    <div>
                         <Header />
                     </div>   
-                    <div className = "body-content">
+                    <div>
                         <Body />
                         
                     </div>
-                    <div className = "footer">    
+                    <div>    
                         <Footer/>
                     </div>      
                 </div>
             </div>             
              
-        </div>
+        </div>  
+
+
+
+       
         </>
 
     )

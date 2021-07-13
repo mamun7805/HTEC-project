@@ -9,12 +9,13 @@ function Sidebar(){
            <div className =  "sidebar" >
                <h3 className = "text-center text-white"> HTEC </h3>
                 <hr className = "bg-white"/>
-            <ul className = "sidebar-list">
-                <li>  <a href = "#"> Dashboard </a> </li>
-                <li>  <a href = "#" > User Management </a> </li>
-                <li>  <a href = "#" > Data </a> </li>
+            <div className = "vertical-menu">
+                  <a href = "#"> Dashboard </a> 
+                  <a href = "#" > User Management </a> 
+                  <a href = "#" > Data </a> 
 
-            </ul>
+            </div>
+
 
             </div>
 

@@ -108,18 +108,18 @@ function Table(){
 			<hr/>
 			<div className = "pagination-bar">
 				  <span>
-					  Page {' '}
+					  {' '}
 					  <strong>
-						  {pageIndex + 1} of {pageOptions.length}
+						  {pageIndex + 1} - {pageOptions.length} {"   "}
 					  </strong>
 				  </span>
-				  <span>
-					  Go to page : {" "}
+				  {/* <span>
+					  {" "} {" "}
 					  <input className = "pagination-box" type = "number" defaultValue = {pageIndex +1} onChange = {e => {
 						  const pageNumber = e.target.value ? Number(e.target.value) -1 : 0
 						  gotoPage(pageNumber)
 					  }} />
-				  </span>
+				  </span> */}
 				  <select className = "pagination-box" value = {pageSize} onChange = {e=> setPageSize(Number(e.target.value))}>
 					  {
 						  [10,25,50].map(pageSize => (
@@ -129,10 +129,10 @@ function Table(){
 						  ))
 					  }
 				  </select>
-				  <button className ="btn btn-sm bg-dark text-white p-2 m-1 "  onClick = {()=> gotoPage(0)} disabled = {!canPreviousPage}  > {"First page" }</button>
-				  <button className ="btn btn-sm bg-dark text-white p-2 m-1"  onClick = {()=> previousPage()} disabled = {!canPreviousPage}  >Prev</button>
-				  <button className ="btn btn-sm bg-dark text-white p-2 m-1" onClick = {()=> nextPage()} disabled = {!canNextPage} >Next</button>
-				  <button className ="btn btn-sm bg-dark text-white p-2 m-1"  onClick = {()=> gotoPage(pageCount - 1) } disabled = {!canNextPage} > {"Last page"} </button>
+				  <button className ="btn btn-sm text-white p-2 m-1 " style = {{background:"#2980b9"}}   onClick = {()=> gotoPage(0)} disabled = {!canPreviousPage}  > <i class="fas fa-fast-backward"></i> </button>
+				  <button className ="btn btn-sm text-white p-2 m-1" style = {{background:"#2980b9"}}   onClick = {()=> previousPage()} disabled = {!canPreviousPage}  ><i class="fas fa-angle-double-left"></i></button>
+				  <button className ="btn btn-sm text-white p-2 m-1" style = {{background:"#2980b9"}}  onClick = {()=> nextPage()} disabled = {!canNextPage} ><i class="fas fa-angle-double-right"></i></button>
+				  <button className ="btn btn-sm text-white p-2 m-1" style = {{background:"#2980b9"}}   onClick = {()=> gotoPage(pageCount - 1) } disabled = {!canNextPage} > <i class="fas fa-fast-forward"></i> </button>
 			  </div>
 
 		</>

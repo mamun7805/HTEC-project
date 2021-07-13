@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Redirect } from 'react-router-dom';
+import { Redirect, Link } from 'react-router-dom';
 
 
 function Login(){
@@ -11,13 +11,15 @@ function Login(){
 
     const loginSubmit = (e)=> {
         e.preventDefault();
-        if(email === "test@gmail.com" && password === "123456"){
+        if(email === "a" && password === "b"){
             setIslogin(true)
             const token = localStorage.setItem('token', "dldfldfldfdfdfdfdfdf");
             if(token === null){
             setIslogin(false);
             }
         }
+        console.log(email);
+        console.log(password)
     }
 
     if(islogin === true){
@@ -30,7 +32,7 @@ function Login(){
                 <div className = "row">
                     <div className = "col-md-4"></div>
                     <div className = "col-md-4">
-                    <div className = "bg-info p-5" >
+                    <div className = "p-5" style = {{background : "#2980b9"}} >
                        <h4 className = "text-center text-white"> Dash Board Login </h4> 
                     </div>
                         <div className = "container bg-white p-5 shadow-sm">
@@ -50,20 +52,19 @@ function Login(){
                                     onChange = {(e)=> setPassword(e.target.value)}
                                 />
                                 <hr/>
-                                <button className = "btn btn-info"> Login </button>
-                                <div className = "text-right">
-                                    <a href = "/# "  > Sign Up </a>
-
-                                </div>
-                                <a href = "#"> Forget Password ?</a>
+                                <button className = "btn text-white" style = {{background : "#2980b9"}} > Login </button>
+                                <br/>
+                                <Link to = "/register " > Sign Up </Link>
+                                <br/>
+                                <a href = "/#"> Forget Password ?</a>
                             </form>
                         </div>
                     </div>
                 <div className = "col-md-4"></div>
                 </div>
-        </div>
+        </div>  
 
-        <div className = "bg-info p-5" >
+        <div className = "p-5" style = {{background : "#2980b9"}} >
         </div>
         
 

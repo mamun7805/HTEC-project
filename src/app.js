@@ -1,10 +1,10 @@
 import React from 'react';
 import { BrowserRouter, Route } from 'react-router-dom';
 
-
-import Login from  "./components/auth/login";
 import Signup from  "./components/auth/signup";
-import Dashboard from './components/auth/admin';
+import Login from  "./components/auth/login";
+import Logout from './components/auth/logout';
+import Dashboard from './components/auth/dashboard';
 
 
 // load css
@@ -23,6 +23,8 @@ const App =()=> {
                 <Route exact path= "/" component = {Login} />
                 <Route  path = "/register" component = {Signup} />
                 <Route path = "/dashboard" component = {Dashboard} />
+                <Route path = "/logout" component = {Logout} />
+                
             </BrowserRouter>
 
             

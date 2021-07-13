@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import "./header.css";
 
 function Header(){
@@ -8,13 +9,10 @@ function Header(){
 
             <div className = "header">
                 <ul className = "top-bar">
-                    <li> <a href = "#"> Logout  </a>  </li>
-                    <li> <a href = "#"> Username  </a> </li>
+                    <li> <Link to ="/logout"> Logout  </Link>  </li>
+                    <li> Username  </li>
                 </ul>
-            
             </div>
-       
-
         </>
 
     )

@@ -1,4 +1,5 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
+import { Redirect } from 'react-router-dom';
 
 
 // load components
@@ -10,17 +11,19 @@ import Footer from '../footer/footer';
 
 
 
-function Admin(){
+function Dashboard(){
 
 
     return(
         <>
-
+            <div className = "jumbotron-fluid">
                <div className = "row">
                 <div className = "col-md-2">
+                    <div className = "jumbotron-fluid">
                     <Sidebar />
+                    </div>
                 </div>
-                <div className = "col-md-10">
+                <div className = "col-md-10 m-0">
                     <div className = "header">
                         <Header />
                     </div>   
@@ -30,15 +33,15 @@ function Admin(){
                     </div>
                     <div className = "footer">    
                         <Footer/>
-                    </div>     
+                    </div>      
                 </div>
             </div>             
              
-
+        </div>
         </>
 
     )
 }
 
 
-export default Admin;
+export default Dashboard;

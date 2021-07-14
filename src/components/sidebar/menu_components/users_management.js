@@ -1,14 +1,13 @@
 import React, {useEffect, useState} from 'react';
 import { Redirect } from 'react-router-dom';
 // load components
-import Sidebar from '../sidebar/sidebar';
-import Header from '../header/header';
-import Body from '../body/body';
-import Footer from '../footer/footer';
+import Sidebar from '../sidebar';
+import Header from '../../header/header';
+import UserTable from '../menu_components/table/table';
+import Footer from '../../footer/footer';
 
 
-
-function Dashboard(){
+function Users_management(){
     const [isLogin, setIsLogin] = useState(true);
 
     useEffect(()=> {
@@ -16,9 +15,7 @@ function Dashboard(){
         if(token === null){
             setIsLogin(false)
         }
-
     })
-
 
     if(isLogin === false){
         return <Redirect to = "/" />
@@ -37,9 +34,8 @@ function Dashboard(){
                     <div>
                         <Header />
                     </div>   
-                    <div>
-                        <Body />
-                        
+                    <div className = "jumbotron m-0">
+                         <UserTable/>
                     </div>
                     <div>    
                         <Footer/>
@@ -48,9 +44,8 @@ function Dashboard(){
             </div>             
         </div>  
         </>
-
     )
 }
 
 
-export default Dashboard;
+export default Users_management;

@@ -69,6 +69,7 @@ function Table(){
 
 	return(
 		<>
+		<h2> User table </h2>
 			<GlobalFilter filter = {globalFilter} setFilter = {setGlobalFilter} />
 		    <table className = "table table-striped table-bordered table-hover " {...getTableProps()}>
 				<thead className = "table-header" >

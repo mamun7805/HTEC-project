@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import "./sidebar.css";
 
 function Sidebar(){
@@ -10,8 +11,8 @@ function Sidebar(){
                <h3 className = "text-center text-white"> HTEC </h3>
                 <hr className = "bg-white"/>
             <div className = "vertical-menu">
-                  <a href = "#"> Dashboard </a> 
-                  <a href = "#" > User Management </a> 
+                 <Link to ="/dashboard" > Dashboard </Link> 
+                 <Link to = "/user-management"> Users </Link>  
                   <a href = "#" > Data </a> 
 
             </div>

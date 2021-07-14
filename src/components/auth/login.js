@@ -21,7 +21,6 @@ function Login(){
         console.log(email);
         console.log(password)
     }
-
     if(islogin === true){
         return <Redirect to = "/dashboard" />
     }
@@ -63,11 +62,8 @@ function Login(){
                 <div className = "col-md-4"></div>
                 </div>
         </div>  
-
         <div className = "p-5" style = {{background : "#2980b9"}} >
         </div>
-        
-
         </>
 
     )

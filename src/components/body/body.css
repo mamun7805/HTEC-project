@@ -25,7 +25,7 @@
     text-align: right;
     border-radius: 30px;
     position: relative;
-    float: right;
+    margin: auto;
 }
 
 .pagination-box {

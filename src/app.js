@@ -7,10 +7,13 @@ import Logout from './components/auth/logout';
 import Dashboard from './components/auth/dashboard';
 import Users_management from './components/sidebar/menu_components/users_management';
 
+import All_machine  from './components/body/all_machine';
 import Machine_status from './components/body/machine_status';
 import Machine_data from './components/body/machine_data';
 import Analytics from './components/body/analytics';
 
+
+import PrivateRoute from './private_route';
 
 const App =()=> {
 

@@ -2,13 +2,12 @@ import React from  'react';
 import Header from '../../header/header';
 import Footer from '../../footer/footer';
 import Sidebar from '../../sidebar/sidebar';
+import Table_data from  "./data_table/table.js";
 
 function Machine_data(){
 
 	return(
 		<>
-
-		 <div >
                <div className = "row">
                 <div className = "col-md-2">
                     <div>
@@ -19,9 +18,9 @@ function Machine_data(){
                     <div>
                         <Header />
                     </div>   
-                    <div>
+                    <div className = "jumbotron m-0">
                          
-                                from machine data
+                        <Table_data />
                         
                     </div>
                     <div>    
@@ -29,7 +28,6 @@ function Machine_data(){
                     </div>      
                 </div>
             </div>             
-        </div>  
 		</>
 		)
 }

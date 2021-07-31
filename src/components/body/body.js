@@ -1,12 +1,12 @@
 import React from 'react';
-import TableStructure from './table/table';
+import All_machine from './all_machine';
 
 function Body(){
 
     return(
         <>
                 <div className = "jumbotron m-0">
-                        <TableStructure />
+                        <All_machine/>
                 </div>
 
         </>

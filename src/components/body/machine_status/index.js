@@ -20,7 +20,7 @@ function Machine_status(){
                         <Header />
                     </div>   
                     <div>
-                         from status pages
+                         
                         
                     </div>
                     <div>    

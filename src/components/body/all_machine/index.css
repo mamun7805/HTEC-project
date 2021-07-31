@@ -1,0 +1,54 @@
+
+.machine-container{
+    display: flex;
+    flex-wrap:wrap;
+    flex-direction: row;
+    flex-flow:wrap;
+}
+
+.all-machine{
+    background :gray;
+    height: 100px;
+    width: 100px;
+    text-align: center;
+    padding: 20px;
+    border-radius: 50%;
+    margin: 10px;
+    color: white;
+    cursor: pointer;
+}
+
+.machine-on{
+    background :#009432;
+    height: 100px;
+    width: 100px;
+    text-align: center;
+    padding: 20px;
+    border-radius: 50%;
+    margin: 10px;
+    color: white;
+    cursor: pointer;
+}
+
+.machine-on:hover{
+    background-color: green;
+    transition: 0.4s;
+}
+
+.machine-off{
+    background-color:#e55039;
+    height: 100px;
+    width: 100px;
+    text-align: center;
+    padding: 20px;
+    border-radius: 50%;
+    margin: 10px;
+    color: white;
+    cursor: pointer;
+}
+
+
+.machine-off:hover{
+    background-color: red;
+    transition: 0.4s;
+}

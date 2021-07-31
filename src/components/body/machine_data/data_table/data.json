@@ -1,0 +1,72 @@
+[
+    {
+      "machine_no": 1,
+      "machine_status": "off",
+      "start": "2021-07-29T20:03:49.004069",
+      "end": "2021-07-29T20:03:56.173286",
+      "total_minutes": 0.12
+    },
+    {
+      "machine_no": 2,
+      "machine_status": "on",
+      "start": "2021-07-29T20:04:29.978241",
+      "end": "2021-07-29T20:04:44.619855",
+      "total_minutes": 0.24
+    },
+    {
+      "machine_no": 3,
+      "machine_status": "on",
+      "start": "2021-07-29T20:04:15.648089",
+      "end": "2021-07-29T20:33:44.991878",
+      "total_minutes": 29.49
+    },
+    {
+      "machine_no": 4,
+      "machine_status": "on",
+      "start": "2021-07-29T20:04:22.447368",
+      "end": "2021-07-29T20:34:57.146777",
+      "total_minutes": 30.58
+    },
+    {
+      "machine_no": 5,
+      "machine_status": "on",
+      "start": "2021-07-29T20:04:26.332287",
+      "end": "2021-07-29T20:36:19.414754",
+      "total_minutes": 31.88
+    },
+    {
+      "machine_no": 6,
+      "machine_status": "off",
+      "start": "2021-07-29T20:36:26.112025",
+      "end": "2021-07-29T21:22:00.186622",
+      "total_minutes": 45.57
+    },
+    {
+      "machine_no": 7,
+      "machine_status": "on",
+      "start": "2021-07-29T21:32:56.985757",
+      "end": "2021-07-29T21:32:56.985757",
+      "total_minutes": 5.0
+    },
+    {
+      "machine_no": 8,
+      "machine_status": "off",
+      "start": "2021-07-29T21:34:41.900169",
+      "end": "2021-07-29T21:34:41.900169",
+      "total_minutes": 5.0
+    },
+    {
+      "machine_no": 9,
+      "machine_status": "off",
+      "start": "2021-07-29T21:37:20.675614",
+      "end": "2021-07-29T21:37:20.675614",
+      "total_minutes": 5.0
+    },
+    {
+      "machine_no": 10,
+      "machine_status": "on",
+      "start": "2021-07-29T21:37:52.883013",
+      "end": "2021-07-29T21:37:52.883013",
+      "total_minutes": 5.0
+    }
+  ]

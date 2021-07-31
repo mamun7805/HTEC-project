@@ -8,12 +8,13 @@ function Sidebar(){
     return(
         <>  
            <div className =  "sidebar" >
-               <h3 className = "text-center text-white"> HTEC </h3>
+               <h3 className = "text-center text-white"> Dashboard </h3>
                 <hr className = "bg-white"/>
             <div className = "vertical-menu">
-                 <Link to ="/dashboard" > Dashboard </Link> 
-                 <Link to = "/user-management"> Users </Link>  
-                  <a href = "#" > Data </a> 
+                 <Link to ="/dashboard" > All Machines </Link> 
+                 <Link to = "/machine-status" >Machiene Status  </Link>
+                 <Link to = "/machine-data"> Machine Data </Link>  
+                 <Link to = "/analytics" > Analytics  </Link> 
 
             </div>
 

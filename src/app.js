@@ -7,6 +7,9 @@ import Logout from './components/auth/logout';
 import Dashboard from './components/auth/dashboard';
 import Users_management from './components/sidebar/menu_components/users_management';
 
+import Machine_status from './components/body/machine_status';
+import Machine_data from './components/body/machine_data';
+import Analytics from './components/body/analytics';
 
 
 const App =()=> {
@@ -20,9 +23,11 @@ const App =()=> {
             <BrowserRouter>
                 <Route exact path= "/" component = {Login} />
                 <Route  path = "/signup" component = {Signup} />
-                <Route path = "/dashboard" component = {Dashboard} />
                 <Route path = "/logout" component = {Logout} />
-                <Route path = "/user-management" component = {Users_management} />
+                <Route path = "/dashboard" component = {Dashboard} />
+                 <Route path = "/machine-status" component = {Machine_status} />
+                <Route path = "/machine-data" component = {Machine_data} />
+                 <Route path = "/analytics" component = {Analytics} />
             </BrowserRouter>
           </div> 
         </>

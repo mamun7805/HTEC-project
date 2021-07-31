@@ -1,24 +1,33 @@
 import React, { useState } from 'react';
 import { Redirect, Link } from 'react-router-dom';
+import axios from 'axios';
 
 
 function Login(){
-    const [email, setEmail] =  useState("");
+    const [username, setUsername] =  useState("");
     const [password, setPassword] = useState(""); 
     const [islogin, setIslogin] = useState(false);
     
     
 
     const loginSubmit = (e)=> {
+
         e.preventDefault();
-        if(email === "a" && password === "b"){
-            setIslogin(true)
-            const token = localStorage.setItem('token', "dldfldfldfdfdfdfdfdf");
-            if(token === null){
-            setIslogin(false);
-            }
-        }
-        console.log(email);
+
+        const User = {
+            username : username,
+            password : password
+         }
+
+        // call api
+        axios.post('http://172.104.163.254:8000/api/v1/users/token/',User)
+        .then(res => {
+            localStorage.setItem('token',res.data.data.token)
+            if(localStorage.getItem('token'))
+                setIslogin(true)
+        })
+
+        console.log(username);
         console.log(password)
     }
     if(islogin === true){
@@ -32,16 +41,16 @@ function Login(){
                     <div className = "col-md-4"></div>
                     <div className = "col-md-4">
                     <div className = "p-5" style = {{background : "#2980b9"}} >
-                       <h4 className = "text-center text-white"> Dash Board Login </h4> 
+                       <h4 className = "text-center text-white"> HTEC Login </h4> 
                     </div>
                         <div className = "container bg-white p-5 shadow-sm">
                             <form onSubmit = {loginSubmit}>
-                                <label> Email </label>
+                                <label> Username </label>
                                 <input 
                                     type = "text"
                                     className = "form-control"
-                                    name = "email"
-                                    onChange = {(e)=> setEmail(e.target.value)}
+                                    name = "username"
+                                    onChange = {(e)=> setUsername(e.target.value)}
                                 />
                                 <label> password </label>
                                 <input 

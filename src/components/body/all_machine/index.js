@@ -43,18 +43,13 @@ function All_machines(){
        
 	useEffect(()=> {
 
-    const config = {
-     	headers: {
-     		Authorization : "jwt" + localStorage.getItem('token')
-     	}
-     } 
-     console.log(config)
-		
-		axios.get("http://172.104.163.254:8000/api/v1/machines/analytics", config)
-			.then(res=> {
-				 console.log(res.data)
-			})
-	})
+    axios.get("http://172.104.163.254:8000/api/v1/machines", {
+    headers: {
+   Authorization: 'jwt' + localStorage.getItem('token')
+    }
+    })
+
+	},[])
 
 
 	return(
@@ -72,6 +67,5 @@ function All_machines(){
 		</>
 		)
 }
-
 
 export default All_machines;

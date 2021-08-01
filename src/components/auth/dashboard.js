@@ -35,7 +35,7 @@ function Dashboard(){
                 </div>
                 <div className = "col-md-10 right-side">
                     <div>
-                        <Header />
+                        <Header/>
                     </div>   
                     <div>
                         <Body />

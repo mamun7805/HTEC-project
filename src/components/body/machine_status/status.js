@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import mqtt from 'mqtt'
-// import "./index.css";
+import "./status.css";
  
 class Status extends Component {
   constructor(props) {

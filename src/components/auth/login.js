@@ -1,6 +1,12 @@
-import React, { useState } from 'react';
+import React, { useState, createContext } from 'react';
 import { Redirect, Link } from 'react-router-dom';
 import axios from 'axios';
+
+
+import Header from '../header/header.js';
+
+
+
 
 
 function Login(){
@@ -9,6 +15,7 @@ function Login(){
     const [islogin, setIslogin] = useState(false);
     
     
+
 
     const loginSubmit = (e)=> {
 
@@ -27,8 +34,8 @@ function Login(){
                 setIslogin(true)
         })
 
-        console.log(username);
-        console.log(password)
+        localStorage.setItem('username', username)
+
     }
     if(islogin === true){
         return <Redirect to = "/dashboard" />
@@ -62,17 +69,17 @@ function Login(){
                                 <hr/>
                                 <button className = "btn text-white" style = {{background : "#2980b9"}} > Login </button>
                                 <br/>
-                                <Link to = "/signup " > Sign Up </Link>
-                                <br/>
-                                <a href = "/#"> Forget Password ?</a>
+                               
                             </form>
                         </div>
                     </div>
                 <div className = "col-md-4"></div>
                 </div>
         </div>  
-        <div className = "p-5" style = {{background : "#2980b9"}} >
-        </div>
+         <div className = "p-5 m-0"  style = {{background : "#2980b9"}} >
+         </div>
+
+      
         </>
 
     )

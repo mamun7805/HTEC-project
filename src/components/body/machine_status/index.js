@@ -2,6 +2,7 @@ import React from  'react';
 import Header from '../../header/header';
 import Footer from '../../footer/footer';
 import Sidebar from '../../sidebar/sidebar';
+import Status from "./status";
 
 function Machine_status(){
 
@@ -19,8 +20,9 @@ function Machine_status(){
                     <div>
                         <Header />
                     </div>   
-                    <div>
+                    <div className = "jumbotron m-3">
                          
+                         <Status/>
                         
                     </div>
                     <div>    

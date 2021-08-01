@@ -1,0 +1,32 @@
+ [
+    {
+      "machine_no": 1,
+      "total_on_time": 29.49,
+      "total_off_time": 0.12,
+      "efficiency": 99.59473150962513
+    },
+    {
+      "machine_no": 2,
+      "total_on_time": 30.58,
+      "total_off_time": 5.0,
+      "efficiency": 85.94716132658797
+    },
+    {
+      "machine_no": 3,
+      "total_on_time": 36.879999999999995,
+      "total_off_time": 45.57,
+      "efficiency": 44.7301394784718
+    },
+    {
+      "machine_no": 4,
+      "total_on_time": 0.24,
+      "total_off_time": 5.0,
+      "efficiency": 4.580152671755725
+    },
+    {
+      "machine_no": 5,
+      "total_on_time": 5.0,
+      "total_off_time": null,
+      "efficiency": null
+    }
+  ]

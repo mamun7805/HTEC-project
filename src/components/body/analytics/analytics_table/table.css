@@ -1,0 +1,36 @@
+
+
+
+
+
+/* table styling */
+.table-header{
+    background-color: #34445e;
+    color: white;
+}
+
+
+/* search box styling  */
+.search-box{
+    max-width: 300px;
+}
+
+
+/* pagination styling */
+.pagination-bar{
+    background-color: #34445e;
+    padding: 10px;
+    color: white;
+    width: 380px;
+    text-align: right;
+    border-radius: 30px;
+    position: relative;
+    margin: auto;
+}
+
+.pagination-box {
+    padding: 5px;
+    border-radius: 10px;
+    height: 38px;
+    width: 95px;
+}

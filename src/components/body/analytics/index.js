@@ -3,6 +3,8 @@ import Header from '../../header/header';
 import Footer from '../../footer/footer';
 import Sidebar from '../../sidebar/sidebar';
 
+import Analytics_table from './analytics_table/table.js'
+
 function Analytics(){
 
 	return(
@@ -19,9 +21,9 @@ function Analytics(){
                     <div>
                         <Header />
                     </div>   
-                    <div>
+                    <div className ="jumbotron m-0">
                          
-                                from Analytics pages
+                                <Analytics_table/>
                         
                     </div>
                     <div>    

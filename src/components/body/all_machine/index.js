@@ -41,20 +41,21 @@ function All_machines(){
 
 	const [machineData , setMachineData] = useState([]);
        
-   
-
 	useEffect(()=> {
 
     const config = {
      	headers: {
-     		authorization : localStorage.getItem('token')
+     		Authorization : "jwt" + localStorage.getItem('token')
      	}
      } 
-		axios.get("http://172.104.163.254:8000/api/v1/machines",config)
+     console.log(config)
+		
+		axios.get("http://172.104.163.254:8000/api/v1/machines/analytics", config)
 			.then(res=> {
 				 console.log(res.data)
 			})
 	})
+
 
 	return(
 		<>

@@ -1,4 +1,5 @@
-import React, { useMemo } from 'react'
+import React, { useMemo, useState, useEffect } from 'react'
+import axios from 'axios';
 import  {useTable, useGlobalFilter, usePagination} from 'react-table';
 import DATA from './data.json';
 import "./table.css";
@@ -28,6 +29,25 @@ const COLUMNS = [
 ]
 
 function Table(){
+
+	const[online_data, setData] = useState([]);
+
+	useEffect(()=> {
+		const config = {
+			headers :{
+				Authorization : "jwt " + localStorage.getItem('token')
+			}
+		}
+
+		axios.get("http://172.104.163.254:8000/api/v1/machines/data",config)
+			.then(res => {
+				setData(res.data)
+			})
+	},[])
+
+
+	console.log(online_data)
+
 	const columns = useMemo(()=> COLUMNS, []);
 	const data = useMemo(()=> DATA, []);
 	const tableInstance = useTable({

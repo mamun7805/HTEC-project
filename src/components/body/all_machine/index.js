@@ -1,71 +1,78 @@
-import React, {useState, useEffect} from  'react';
+import React, { Component } from 'react';
+import mqtt from 'mqtt'
 import axios from 'axios';
 import "./index.css";
-
-
-
-const  Data = [
-    {
-      "name": "Cleaning Machine",
-      "machine_no": 1
-    },
-    {
-      "name": "Blending Machine",
-      "machine_no": 2
-    },
-    {
-      "name": "Lap Former",
-      "machine_no": 3
-    },
-    {
-      "name": "Carding",
-      "machine_no": 4
-    },
-    {
-      "name": "Drawing Machin",
-      "machine_no": 5
-    },
-    {
-      "name": "Simplex Machine",
-      "machine_no": 6
-    },
-    {
-      "name": "Ring Frame",
-      "machine_no": 7
+ 
+class All_machine extends Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      data: {},
+      machines : []
     }
-  ]
+  }
+ 
+  componentDidMount() {
 
+  	const config = {
+  		headers : {
+  			Authorization : 'jwt '+ localStorage.getItem('token')
+  		}
+  	}
+  	axios.get("http://172.104.163.254:8000/api/v1/machines", config)
+  		.then(res =>{
 
+  			this.setState({
+  				machines : res.data.data
+  			})
+  		})
 
-function All_machines(){
-
-	const [machineData , setMachineData] = useState([]);
-       
-	useEffect(()=> {
-
-    axios.get("http://172.104.163.254:8000/api/v1/machines", {
-    headers: {
-   Authorization: 'jwt' + localStorage.getItem('token')
-    }
+  	 // establish mqqt connection
+    this.client = mqtt.connect('mqtt://127.0.0.1:8083');
+    this.client.options.username = "shafik"
+    this.client.options.password = "shafik";
+    this.client.on("connect", () => {
+      console.log("connected");
+      this.client.subscribe("machine/+");
+    });
+    this.client.on('message', (topic, message) => {
+      this.handleJsonMessage(topic, message.toString());
     })
+  }
+ 
+  handleJsonMessage = (topic, message) => {
+    const machine_no = topic.split("/")[1];
+    let new_data =this.state.data;
+    new_data[machine_no] = message;
+    this.setState({data: new_data});
+  }
+ 
+  componentWillUnmount() {
+    if (this.client) {
+      this.client.end()
+    }
+  }
+ 
+  render() {
+    console.log("state data: ", this.state.data);
+    console.log("all machine : ", this.state.machines)
 
-	},[])
 
+    return (
+  
 
-	return(
-		<>
-			<div  className ="machine-container">
-		     {
-		     	Data.map(d=> 
-		     		<div className = "all-machine"> {d.name} </div>
-		      )
-		     }
+        <div className = "machine-container">
+        	   	
+        	   	{
+        	   		this.state.machines.map(d => 
+        	   			<div className = "all-machine"> {d.name} </div>
 
-             </div>
-                 
-
-		</>
-		)
+        	   		)
+        	   	}
+        	
+        </div>
+    );
+  }
 }
-
-export default All_machines;
+ 
+export default All_machine;

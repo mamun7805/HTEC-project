@@ -77,8 +77,8 @@ function Login(){
                 </div>
         </div>  
          <div className = "p-5 m-0"  style = {{background : "#2980b9"}} >
+            <div className = "p-5"></div>
          </div>
-
       
         </>
 
